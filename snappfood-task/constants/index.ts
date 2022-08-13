@@ -9,6 +9,7 @@ export const vendors: Vendor[] = [
     delivery_fee: '100',
     restaurantRate: '4.5',
     restaurantTitle: '_دیسکریپشن_',
+    rating: 8.55,
     featured:
       'https://cdn.snappfood.ir/uploads/images/review-app/icons/count/desktop_1_603508bf202d8_img_st_food.png',
   },
@@ -20,6 +21,7 @@ export const vendors: Vendor[] = [
     delivery_fee: '100',
     restaurantRate: '4.5',
     restaurantTitle: '_دیسکریپشن_',
+    rating: 10,
     featured:
       'https://cdn.snappfood.ir/uploads/images/review-app/icons/count/desktop_1_603508bf202d8_img_st_food.png',
   },
