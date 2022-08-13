@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+You are welcome to Linquip ReactJS challenge 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We have a component called DynamicList which is responsible:
+To take some titles and render them dynamically.
+User is able to remove each added item.
+Finally, user can send entered titles to server using an api Call.
 
-## Available Scripts
+The main structure of them app is implemented. and wee need you to:
+- Take data from the Form component and add it to the list
+- Render the list from added items (currently showing items are hard-coded)
+- Implement Remove button functionality
+- Send data to the server by clicking on "Send to Server" button
+- After sending data to server using (), show successful message for 2 seconds 
 
-In the project directory, you can run:
+Attentions:
+- Don't rename, add or remove props of defined components.
+- Don't add or remove any file
+- All components should use pore-defined context (DynamicListContext) to handle the list state.
+- The scope of this task is /src/components/DynamicList directory
+- Assume that saveContacts() is an api call which sends given list to the server
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+You can use `npm install` and `npm start` to run the project on port 3000 
