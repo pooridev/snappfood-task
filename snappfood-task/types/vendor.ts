@@ -1,10 +1,13 @@
 export type Vendor = {
-  id: string;
-  CoverImage: string;
-  logo: string;
+  id: number;
+  /** Cover image */
+  backgroundImageCustom: string;
+  /** Logo */
+  featured: string;
   restaurantTitle: string;
   restaurantRate: string;
-  price: string;
-  deliveryType: string;
+  delivery_fee: string;
+  is_express: boolean;
+  rating: number;
   description: string;
 };
