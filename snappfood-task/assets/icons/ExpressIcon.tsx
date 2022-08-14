@@ -4,8 +4,8 @@ const ExpressIcon = ({
   svgProps,
   pathProps,
 }: {
-  svgProps: SVGProps<SVGSVGElement>;
-  pathProps: SVGProps<SVGPathElement>;
+  svgProps?: SVGProps<SVGSVGElement>;
+  pathProps?: SVGProps<SVGPathElement>;
 }) => (
   <svg
     width="1.25rem"
