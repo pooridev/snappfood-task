@@ -1,0 +1,12 @@
+.vendors-list {
+  padding: 0 1rem;
+  max-width: 35rem;
+  margin: auto;
+  &__infiniteScroll {
+    width: 100% !important;
+    padding: 1rem 0;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}
