@@ -1,7 +1,7 @@
 import { VendorCardProps } from './types';
 import { FC, memo, SyntheticEvent } from 'react';
 import { DeliveryIcon, StarIcon } from '../../../../assets/icons';
-import { formatPrice, toPersinaDigit } from '../../../../helpers/numbers';
+import { formatPrice, toPersianDigit } from '../../../../helpers/numbers';
 import { onImageError } from '../../../../helpers/dom';
 import { areEqual } from 'react-window';
 
@@ -73,11 +73,11 @@ const VendorCard: FC<VendorCardProps> = (props) => {
             <div className="vendor-card__content-top_leftSide">
               <span className="vendor-card__content-top_ratingCount">
                 <span className="vendor-card__content-top_separator">(</span>
-                {toPersinaDigit(voteCount)}
+                {toPersianDigit(voteCount)}
                 <span className="vendor-card__content-top_separator">)</span>
               </span>
               <div className={'vendor-card__content-top_rate ' + rateElementCSSClass(rate)}>
-                <span>{toPersinaDigit(rate)}</span>
+                <span>{toPersianDigit(rate)}</span>
                 <StarIcon
                   svgProps={{ className: rateElementCSSClass(rate) }}
                   pathProps={{ className: rateElementCSSClass(rate) }}
@@ -98,7 +98,7 @@ const VendorCard: FC<VendorCardProps> = (props) => {
           </div>
           {eta && (
             <div className="vendor-card__content-bottom-deliveryTime">
-              <p>تا {toPersinaDigit(eta)} دقیقه</p>
+              <p>تا {toPersianDigit(eta)} دقیقه</p>
               <DeliveryIcon />
             </div>
           )}
