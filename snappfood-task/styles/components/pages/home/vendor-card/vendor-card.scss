@@ -1,0 +1,192 @@
+@import '../../../../abstracts/colors';
+
+.vendor-card {
+  position: relative;
+  background-color: $white;
+  border-radius: 0.7rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 1.2rem;
+  direction: rtl !important;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $card-shadow-1;
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  &__header {
+    height: 134px;
+    width: 100%;
+    position: relative;
+
+    &-couponText {
+      background: $white;
+      border-radius: 16px 0 0 16px;
+      font-size: $text-small;
+      padding: 4px 35px 4px 8px;
+      overflow: hidden;
+      position: absolute;
+      top: 1rem;
+      right: -1.3rem;
+      color: $primary-green;
+    }
+
+    &-cover {
+      border-radius: 0.7rem 0.7rem 0 0;
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      background-color: $white;
+      z-index: 1;
+
+      position: absolute;
+      bottom: -16px;
+      right: 8px;
+      width: 64px;
+      height: 64px;
+      padding: 4px;
+      border-radius: 8px;
+      box-shadow: $card-shadow-1;
+      img {
+        border-radius: 4px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__content {
+    padding: 2rem 0.8rem 0 0.8rem;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      &_separator {
+        color: $seperator-color;
+      }
+      &_title {
+        flex: 1;
+        color: $text-color;
+        font-weight: $font-medium;
+        font-size: $text-medium;
+      }
+      &_leftSide {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+      }
+      &_rate {
+        display: flex;
+        align-items: flex-start;
+        padding: 0.2rem 0.4rem;
+        gap: 0.2rem;
+        font-size: $text-small;
+        border-radius: 4px;
+
+        svg {
+          margin-top: 2px;
+        }
+      }
+
+      &_ratingCount {
+        font-size: $text-small;
+        color: $text-light;
+      }
+    }
+    &-middle {
+      &-description {
+        font-size: $text-small;
+        font-weight: $font-regular;
+        color: $text-color;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 0.2rem;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+
+      &-deliveryTime {
+        display: flex;
+        align-items: center;
+
+        & p {
+          color: $text-color;
+          font-size: $text-small;
+          font-weight: $font-regular;
+          margin-left: 4px;
+        }
+      }
+
+      &-deliveryType {
+        display: flex;
+        margin-top: 0.7rem;
+
+        & p {
+          font-size: $text-small;
+          color: $text-light;
+          font-weight: $font-medium;
+        }
+
+        & span {
+          color: $text-color;
+          margin-right: 0.5rem;
+          font-size: $text-small;
+        }
+      }
+    }
+
+    .starColor-45 {
+      color: $starcolor-45;
+      fill: $starcolor-45;
+      background: rgba($starcolor-45, 0.08);
+    }
+    .starColor-40 {
+      color: $starcolor-40;
+      fill: $starcolor-40;
+      background: rgba($starcolor-40, 0.08);
+    }
+    .starColor-35 {
+      color: $starcolor-35;
+      fill: $starcolor-35;
+      background: rgba($starcolor-35, 0.08);
+    }
+    .starColor-30 {
+      color: $starcolor-30;
+      fill: $starcolor-30;
+      background: rgba($starcolor-30, 0.08);
+    }
+    .starColor-25 {
+      color: $starcolor-25;
+      fill: $starcolor-25;
+      background: rgba($starcolor-25, 0.08);
+    }
+    .starColor-20 {
+      color: $starcolor-20;
+      fill: $starcolor-20;
+      background: rgba($starcolor-20, 0.08);
+    }
+    .starColor-15 {
+      color: $starcolor-15;
+      fill: $starcolor-15;
+      background: rgba($starcolor-15, 0.08);
+    }
+    .starColor-10 {
+      color: $starcolor-10;
+      fill: $starcolor-10;
+      background: rgba($starcolor-10, 0.08);
+    }
+  }
+}
