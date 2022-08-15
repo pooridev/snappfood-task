@@ -1,7 +1,6 @@
 import { Vendor } from './../../types/vendor';
 
 export const normalizeVendors = (vendors: { data: Vendor; type: string }[]) => {
-  debugger;
   const vendorsWithCorrectData = vendors
     // Remove uncorrect data which is not object
     .filter((vendor) => {
