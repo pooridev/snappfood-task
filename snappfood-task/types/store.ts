@@ -4,7 +4,7 @@ import { Vendor } from './vendor';
 export type InitialState = {
   loading: boolean;
   vendors: Vendor[];
-  count: number;
+  count: number | null;
 };
 
 export type VendorActions = {

@@ -1,11 +1,15 @@
 export type Vendor = {
   id: number;
-  coverPath: string;
+  backgroundImageCustom: string;
   logo: string;
-  restaurantTitle: string;
-  restaurantRate: string;
+  title: string;
   deliveryFee: number;
-  is_express: boolean;
+  isZFExpress: boolean;
   rate: number;
   description: string;
+  best_coupon: string;
+  eta: number;
+  max_eta: number;
+  discount: number;
+  voteCount: number;
 };
