@@ -5,15 +5,17 @@ import { Dispatch } from 'redux';
 
 import { types } from '../types/vendors';
 
-const hasMore = (count: number, page: number, pageSize: number) => {
+const shouldLoadMore = (count: number, page: number, pageSize: number) => {
   return count > page * pageSize;
 };
 
 export const getNextPageVendors = (params: VendorsParams) => (dispatch: Dispatch, getState: () => AppState) => {
-  if (!hasMore(getState().vendors.count, params?.page ?? 1, params?.page_size ?? 10)) {
-    return;
+  if (typeof getState().vendors.count === 'number') {
+    if (!shouldLoadMore(getState().vendors.count!, params?.page ?? 1, params?.page_size ?? 10)) {
+      debugger;
+      return;
+    }
   }
-
   dispatch({ type: types.GET_VENDORS_REQUEST });
 
   getVendorsRequest(params)

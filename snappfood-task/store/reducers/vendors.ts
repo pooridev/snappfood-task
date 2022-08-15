@@ -4,7 +4,7 @@ import { InitialState, VendorActions } from './../../types/store';
 const initialState: InitialState = {
   loading: true,
   vendors: [],
-  count: 0,
+  count: null,
 };
 
 function VendorReducer(state = initialState, action: VendorActions) {
