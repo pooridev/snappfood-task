@@ -1,0 +1,23 @@
+@import './index.scss';
+
+// global styles
+@import './globals.scss';
+
+// Layout
+@import './layouts/index.scss';
+
+/*
+  ----------- Components -----------
+  -----------            -----------
+*/
+
+// page components
+@import './components/pages/home/vendor-card/vendor-card.scss';
+@import './components/pages/home/vendor-list/vendor-list.scss';
+
+/*
+  ----------- Pages -----------
+  -----------       -----------
+*/
+@import './pages/404.scss';
+@import './pages/index.scss';
