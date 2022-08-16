@@ -54,7 +54,6 @@ const VendorCard: FC<VendorCardProps> = (props) => {
 
   return (
     <div style={virtualizeStyles}>
-      <div className="padding-top-10" />
       <article className="vendor-card">
         <header className="vendor-card__header">
           {best_coupon && <p className="vendor-card__header-couponText">{best_coupon}</p>}
@@ -108,7 +107,6 @@ const VendorCard: FC<VendorCardProps> = (props) => {
           </div>
         </div>
       </article>
-      <div className="padding-bottom-10" />
     </div>
   );
 };
