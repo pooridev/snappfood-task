@@ -1,8 +1,9 @@
-import { VendorCardProps } from './types';
-import { FC, memo, SyntheticEvent } from 'react';
+import { FC, SyntheticEvent } from 'react';
+
 import { DeliveryIcon, StarIcon } from '../../../../assets/icons';
 import { formatPrice, toPersianDigit } from '../../../../helpers/numbers';
 import { onImageError } from '../../../../helpers/dom';
+import { VendorCardProps } from './types';
 
 const rateElementCSSClass = (rate: number) => {
   if (rate > 4.5) {
