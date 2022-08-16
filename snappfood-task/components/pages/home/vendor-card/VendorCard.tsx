@@ -32,6 +32,7 @@ const rateElementCSSClass = (rate: number) => {
 };
 
 const VendorCard: FC<VendorCardProps> = (props) => {
+  const { vendor, virtualizeStyles } = props;
   const {
     eta,
     rate,
@@ -43,7 +44,7 @@ const VendorCard: FC<VendorCardProps> = (props) => {
     title,
     best_coupon,
     voteCount,
-  } = props;
+  } = vendor;
 
   const imageErrorHandler = (type: 'cover' | 'logo') => {
     return (e: SyntheticEvent<HTMLImageElement, Event>) => {
@@ -52,7 +53,7 @@ const VendorCard: FC<VendorCardProps> = (props) => {
   };
 
   return (
-    <article className="vendor-card">
+    <article className="vendor-card" style={virtualizeStyles}>
       <header className="vendor-card__header">
         {best_coupon && <p className="vendor-card__header-couponText">{best_coupon}</p>}
 
@@ -93,7 +94,7 @@ const VendorCard: FC<VendorCardProps> = (props) => {
           <div className="vendor-card__content-bottom-deliveryType">
             <p>{isZFExpress ? 'ارسال اکسپرس' : 'پیک فروشنده'}</p>
             <span className="vendor-card__content-bottom-deliveryType_price">
-              {deliveryFee > 0 ? formatPrice(deliveryFee) + 'تومان' : 'رایگان'}
+              {deliveryFee > 0 ? formatPrice(deliveryFee) + 'تومان ' : 'رایگان '}
             </span>
           </div>
           {eta && (
