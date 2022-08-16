@@ -3,10 +3,10 @@
 In this project you can find a list of all the vendors that are currently using SnappFood.
 The list will be updated every time a new vendor is added to the system or your location is changed.
 
-## Project's view
-
+<h1 align="center"> Project's view <h1/>
+<p align="center">
 <img src="https://user-images.githubusercontent.com/66781740/184869335-439a973e-c49c-49fd-893b-9e2c72e840b7.png" />
-
+<p/>
 ---
 
 ## Installation and Setup Instructions
@@ -64,7 +64,7 @@ To Visit App:
   <!-- <img src="https://user-images.githubusercontent.com/66781740/184870445-6ee04169-e9cb-4c05-95bb-0eadad20b1c4.png" /> -->
 - ## Virtualized list for perfomance concerns.
     <!-- <img  src="https://user-images.githubusercontent.com/66781740/184871273-85c986b2-7e01-4d02-9a08-38f79f1bb829.png" /> -->
-- Scroll based pagination.
+- ## Scroll based pagination.
 
 ## Project structure
 
