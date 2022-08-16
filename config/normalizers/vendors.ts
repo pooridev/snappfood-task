@@ -17,11 +17,10 @@ export const normalizeVendors = (vendors: { data: Vendor; type: string }[]) => {
         ...vendor.data,
         title: vendor.data.title ?? 'بون سی',
         deliveryFee: vendor.data.deliveryFee ?? 2500,
-        // Just to show it in ui
         eta: showRealEta ? vendor.data.eta : showhHardCodedEta ? 25 : null,
       };
     })
-    // remove undefined data
+    // remove falsy items
     .filter(Boolean);
 
   return vendorsWithCorrectData;
