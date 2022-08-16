@@ -9,12 +9,16 @@ export const normalizeVendors = (vendors: { data: Vendor; type: string }[]) => {
       }
     })
     // set default data for each vendor
-    .map((vendor) => {
+    .map((vendor, index) => {
+      const showhHardCodedEta = vendor.data.eta < 1 && index === 0 ? true : false;
+      const showRealEta = vendor.data.eta >= 1 && index !== 0;
+
       return {
         ...vendor.data,
         title: vendor.data.title ?? 'بون سی',
         deliveryFee: vendor.data.deliveryFee ?? 2500,
-        eta: vendor.data.eta >= 1 ? vendor.data.eta : null,
+        // Just to show it in ui
+        eta: showRealEta ? vendor.data.eta : showhHardCodedEta ? 25 : null,
       };
     })
     // remove undefined data
