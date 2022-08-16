@@ -14,6 +14,7 @@ export const normalizeVendors = (vendors: { data: Vendor; type: string }[]) => {
         ...vendor.data,
         title: vendor.data.title ?? 'بون سی',
         deliveryFee: vendor.data.deliveryFee ?? 2500,
+        eta: vendor.data.eta >= 1 ? vendor.data.eta : null,
       };
     })
     // remove undefined data
