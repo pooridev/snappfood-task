@@ -1,34 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## SnappFood Vendors List
 
-## Getting Started
+In this project you can find a list of all the vendors that are currently using SnappFood.
+The list will be updated every time a new vendor is added to the system or your location is changed.
 
-First, run the development server:
+## Project's view
 
-```bash
-npm run dev
-# or
-yarn dev
+<img src="https://user-images.githubusercontent.com/66781740/184869335-439a973e-c49c-49fd-893b-9e2c72e840b7.png" />
+
+---
+
+## Installation and Setup Instructions
+
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+
+Installation:
+
+`npm install`
+
+To Start Server:
+
+`npm start`
+
+To Visit App:
+
+`localhost:3000`
+
+# Features:
+
+- ## Custom middleware to normalize server response.
+
+  ```tsx
+  import { Vendor } from './../../types/vendor';
+
+  export const normalizeVendors = (vendors: { data: Vendor; type: string }[]) => {
+    const vendorsWithCorrectData = vendors
+
+      // Remove uncorrect data which is not object
+      .filter((vendor) => {
+        if (typeof vendor.data === 'object') {
+          return vendor.data;
+        }
+      })
+      // set default data for each vendor
+      .map((vendor, index) => {
+        const showhHardCodedEta = vendor.data.eta < 1 && index === 0 ? true : false;
+        const showRealEta = vendor.data.eta >= 1 && index !== 0;
+
+        return {
+          ...vendor.data,
+          title: vendor.data.title ?? 'بون سی',
+          deliveryFee: vendor.data.deliveryFee ?? 2500,
+          eta: showRealEta ? vendor.data.eta : showhHardCodedEta ? 25 : null,
+        };
+      })
+      // remove falsy items
+      .filter(Boolean);
+
+    return vendorsWithCorrectData;
+  };
+  ```
+
+- ## Dynamic theme color for rate section.
+  <!-- <img src="https://user-images.githubusercontent.com/66781740/184870445-6ee04169-e9cb-4c05-95bb-0eadad20b1c4.png" /> -->
+- ## Virtualized list for perfomance concerns.
+    <!-- <img  src="https://user-images.githubusercontent.com/66781740/184871273-85c986b2-7e01-4d02-9a08-38f79f1bb829.png" /> -->
+- Scroll based pagination.
+
+## Project structure
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+├── assets # Contains images.
+├── components # Contains Components used in each page.
+├── constants # Contains constant data.
+|-- hooks # Contains custom hooks.
+├── services # Contains api calls.
+|-- configs # Contains configs for project.
+|   |-- api.ts # Axios instance.
+|   |-- normalizers # Holds response normalizers.
+|
+├── layouts # Contains the main layout to render shared components around the application.
+|-- store # Contains redux store.
+└── pages # Contains pages that we're going to render using router.
+└── types # Contains types and interfaces.
+└── helpers # Holds helper and ustility functions.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
