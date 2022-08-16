@@ -3,7 +3,6 @@ import { FC, memo, SyntheticEvent } from 'react';
 import { DeliveryIcon, StarIcon } from '../../../../assets/icons';
 import { formatPrice, toPersianDigit } from '../../../../helpers/numbers';
 import { onImageError } from '../../../../helpers/dom';
-import { areEqual } from 'react-window';
 
 const rateElementCSSClass = (rate: number) => {
   if (rate > 4.5) {
@@ -113,4 +112,4 @@ const VendorCard: FC<VendorCardProps> = (props) => {
   );
 };
 
-export default memo(VendorCard, areEqual);
+export default VendorCard;
