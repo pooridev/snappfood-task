@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useState } from 'react';
 import { AutoSizer, InfiniteLoader, List, WindowScroller } from 'react-virtualized';
 
