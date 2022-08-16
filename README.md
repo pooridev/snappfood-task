@@ -1,22 +1,34 @@
-You are welcome to Linquip ReactJS challenge 
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-We have a component called DynamicList which is responsible:
-To take some titles and render them dynamically.
-User is able to remove each added item.
-Finally, user can send entered titles to server using an api Call.
+## Getting Started
 
-The main structure of them app is implemented. and wee need you to:
-- Take data from the Form component and add it to the list
-- Render the list from added items (currently showing items are hard-coded)
-- Implement Remove button functionality
-- Send data to the server by clicking on "Send to Server" button
-- After sending data to server using (), show successful message for 2 seconds 
+First, run the development server:
 
-Attentions:
-- Don't rename, add or remove props of defined components.
-- Don't add or remove any file
-- All components should use pore-defined context (DynamicListContext) to handle the list state.
-- The scope of this task is /src/components/DynamicList directory
-- Assume that saveContacts() is an api call which sends given list to the server
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-You can use `npm install` and `npm start` to run the project on port 3000 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
