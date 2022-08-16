@@ -46,7 +46,7 @@ const VendorList = () => {
                     height={height}
                     isScrolling={isScrolling}
                     onScroll={onChildScroll}
-                    rowHeight={255}
+                    rowHeight={275}
                     scrollTop={scrollTop}
                     width={width}
                   />

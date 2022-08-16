@@ -53,59 +53,63 @@ const VendorCard: FC<VendorCardProps> = (props) => {
   };
 
   return (
-    <article className="vendor-card" style={virtualizeStyles}>
-      <header className="vendor-card__header">
-        {best_coupon && <p className="vendor-card__header-couponText">{best_coupon}</p>}
+    <div style={virtualizeStyles}>
+      <div className="padding-top-10" />
+      <article className="vendor-card">
+        <header className="vendor-card__header">
+          {best_coupon && <p className="vendor-card__header-couponText">{best_coupon}</p>}
 
-        <img
-          className="vendor-card__header-cover"
-          src={backgroundImageCustom}
-          alt={title + ' cover'}
-          onError={imageErrorHandler('cover')}
-        />
-        <span className="vendor-card__header-logo">
-          <img src={logo} alt={title + ' logo'} onError={imageErrorHandler('logo')} />
-        </span>
-      </header>
-      <div className="vendor-card__content">
-        <div className="vendor-card__content-top">
-          <h5 className="vendor-card__content-top_title">{title}</h5>
-          {!!rate && (
-            <div className="vendor-card__content-top_leftSide">
-              <span className="vendor-card__content-top_ratingCount">
-                <span className="vendor-card__content-top_separator">(</span>
-                {toPersianDigit(voteCount)}
-                <span className="vendor-card__content-top_separator">)</span>
-              </span>
-              <div className={'vendor-card__content-top_rate ' + rateElementCSSClass(rate)}>
-                <span>{toPersianDigit(rate)}</span>
-                <StarIcon
-                  svgProps={{ className: rateElementCSSClass(rate) }}
-                  pathProps={{ className: rateElementCSSClass(rate) }}
-                />
+          <img
+            className="vendor-card__header-cover"
+            src={backgroundImageCustom}
+            alt={title + ' cover'}
+            onError={imageErrorHandler('cover')}
+          />
+          <span className="vendor-card__header-logo">
+            <img src={logo} alt={title + ' logo'} onError={imageErrorHandler('logo')} />
+          </span>
+        </header>
+        <div className="vendor-card__content">
+          <div className="vendor-card__content-top">
+            <h5 className="vendor-card__content-top_title">{title}</h5>
+            {!!rate && (
+              <div className="vendor-card__content-top_leftSide">
+                <span className="vendor-card__content-top_ratingCount">
+                  <span className="vendor-card__content-top_separator">(</span>
+                  {toPersianDigit(voteCount)}
+                  <span className="vendor-card__content-top_separator">)</span>
+                </span>
+                <div className={'vendor-card__content-top_rate ' + rateElementCSSClass(rate)}>
+                  <span>{toPersianDigit(rate)}</span>
+                  <StarIcon
+                    svgProps={{ className: rateElementCSSClass(rate) }}
+                    pathProps={{ className: rateElementCSSClass(rate) }}
+                  />
+                </div>
               </div>
-            </div>
-          )}
-        </div>
-        <div className="vendor-card__content-middle">
-          <p className="vendor-card__content-middle-description">{description}</p>
-        </div>
-        <div className="vendor-card__content-bottom">
-          <div className="vendor-card__content-bottom-deliveryType">
-            <p>{isZFExpress ? 'ارسال اکسپرس' : 'پیک فروشنده'}</p>
-            <span className="vendor-card__content-bottom-deliveryType_price">
-              {deliveryFee > 0 ? formatPrice(deliveryFee) + 'تومان ' : 'رایگان '}
-            </span>
+            )}
           </div>
-          {eta && (
-            <div className="vendor-card__content-bottom-deliveryTime">
-              <p>تا {toPersianDigit(eta)} دقیقه</p>
-              <DeliveryIcon />
+          <div className="vendor-card__content-middle">
+            <p className="vendor-card__content-middle-description">{description}</p>
+          </div>
+          <div className="vendor-card__content-bottom">
+            <div className="vendor-card__content-bottom-deliveryType">
+              <p>{isZFExpress ? 'ارسال اکسپرس' : 'پیک فروشنده'}</p>
+              <span className="vendor-card__content-bottom-deliveryType_price">
+                {deliveryFee > 0 ? formatPrice(deliveryFee) + 'تومان ' : 'رایگان '}
+              </span>
             </div>
-          )}
+            {eta && (
+              <div className="vendor-card__content-bottom-deliveryTime">
+                <p>تا {toPersianDigit(eta)} دقیقه</p>
+                <DeliveryIcon />
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+      <div className="padding-bottom-10" />
+    </div>
   );
 };
 
