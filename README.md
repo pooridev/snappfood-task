@@ -86,6 +86,3 @@ To Visit App:
 └── helpers # Holds helper and ustility functions.
 
 ```
-
-```
-
