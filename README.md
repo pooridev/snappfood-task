@@ -7,7 +7,7 @@ The list will be updated every time a new vendor is added to the system or your 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/66781740/184869335-439a973e-c49c-49fd-893b-9e2c72e840b7.png" />
 <p/>
----
+
 
 ## Installation and Setup Instructions
 
